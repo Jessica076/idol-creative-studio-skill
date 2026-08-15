@@ -14,6 +14,8 @@ ASSETS = {
     "photocard": {"composition": "premium 2.5:3.5 collectible card layout with print-safe margins", "output": "750x1050 PNG minimum"},
 }
 
+CREATOR_MARK = "JESSICA • FAN MADE"
+
 
 def generate_prompt(output_type: str, style: str, text: str = "", notes: str = "") -> str:
     """Return a complete prompt for a host-provided image editing tool."""
@@ -40,10 +42,13 @@ Composition: {asset['composition']}
 Exact text: {copy}
 Additional requirements: {extra}
 Output target: {asset['output']}
+Creator attribution: reserve a quiet bottom safe-zone position for the exact mark
+"{CREATOR_MARK}". Prefer compositing assets/jessica-fan-made-mark.svg after generation
+when a local graphics tool is available so the lettering remains exact.
 
 Quality constraints: polished lighting, coherent anatomy, crisp edges, balanced spacing.
 Avoid face reshaping, extra people, extra fingers or limbs, illegible text, brand logos,
-watermarks, fake signatures, and anything that implies official endorsement.
+third-party watermarks, fake signatures, and anything that implies official endorsement.
 """.strip()
 
 

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="144" viewBox="0 0 560 144" role="img" aria-labelledby="title desc">
+  <title id="title">Jessica Fan Made creator mark</title>
+  <desc id="desc">A rounded capsule creator mark with a four-point sparkle, Jessica, and Fan Made.</desc>
+  <rect x="4" y="4" width="552" height="136" rx="68" fill="#F5F0E8" stroke="#272426" stroke-width="8"/>
+  <path d="M72 28c5 24 14 33 38 38-24 5-33 14-38 38-5-24-14-33-38-38 24-5 33-14 38-38Z" fill="#A13B49"/>
+  <circle cx="112" cy="39" r="6" fill="#496557"/>
+  <text x="142" y="70" fill="#272426" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700" letter-spacing="5">JESSICA</text>
+  <line x1="144" y1="87" x2="493" y2="87" stroke="#A13B49" stroke-width="4"/>
+  <text x="145" y="119" fill="#514B4E" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" letter-spacing="7">FAN MADE</text>
+</svg>

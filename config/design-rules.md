@@ -16,8 +16,15 @@
 
 - Use exact user-provided spelling. Keep generated text short.
 - Never invent signatures, endorsements, agency logos, or official marks.
-- Add `FAN MADE` or `UNOFFICIAL` when confusion with official merchandise is plausible.
+- Add the creator mark from `assets/jessica-fan-made-mark.svg` when confusion with official merchandise is plausible. If the asset cannot be composited, use the exact fallback text `JESSICA • FAN MADE`.
+
+## Creator mark
+
+- Preserve the sparkle-and-capsule construction, proportions, and exact wording of the supplied SVG.
+- Place it in a lower corner or bottom safe zone with clear breathing room; never cover a face, hand, garment detail, or cut line.
+- Keep its width near 8–14% of the canvas on wallpapers and sticker sheets, or 14–20% on photocards. Keep opacity between 65–85% when compositing over artwork.
+- Use a light mark on dark areas and a charcoal mark on light areas. Do not add agency names, trademarks, signatures, or language implying official endorsement.
 
 ## Final inspection
 
-Reject or retry outputs with identity drift, extra people, malformed anatomy, unreadable text, unintended watermark, broken transparency, or incorrect aspect ratio.
+Reject or retry outputs with identity drift, extra people, malformed anatomy, unreadable text, missing or misspelled creator attribution, unintended watermark, broken transparency, or incorrect aspect ratio.
