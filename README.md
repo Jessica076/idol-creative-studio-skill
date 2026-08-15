@@ -23,6 +23,8 @@
 
 The skill asks the host's available image editor to preserve the reference person's identity, checks common generation defects, and labels potentially confusing designs as unofficial fan-made work.
 
+Sticker sheets default to a tall **16:25 portrait canvas** (recommended `1600×2500`), matching the approved reference layout: full and balanced with natural breathing room and no heavy overlap.
+
 ## Install from GitHub
 
 Ask Codex:

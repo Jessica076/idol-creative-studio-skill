@@ -46,7 +46,7 @@ Keep typography short. For exact names, dates, or long copy, prefer generating a
 - Phone wallpaper: 1290×2796 portrait PNG, with clock/widget safe space.
 - Desktop wallpaper: 3840×2160 landscape PNG.
 - Sticker: square transparent PNG, 3000×3000 when supported, bold cut line.
-- Sticker sheet: 4:5 portrait or square PNG/JPG with an opaque palette-matched paper background, 1–2 realistic person stickers, and 4–8 simplified object stickers.
+- Sticker sheet: 16:25 portrait PNG/JPG (use 1600×2500 or a proportional size) with an opaque palette-matched paper background, realistic person stickers, and simplified object stickers.
 - Photocard: 2.5×3.5 inch ratio, 750×1050 minimum; create front and back as separate files when both are requested.
 
 Read `config/size-guide.md` for device-specific sizing and print bleed. Read `config/design-rules.md` for identity, text, and quality checks.

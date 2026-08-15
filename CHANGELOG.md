@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.2.0
+
+- Change the default sticker-sheet canvas from 4:5 to the approved 16:25 portrait ratio.
+- Recommend 1600×2500 output and preserve a full, naturally spaced layout with no heavy overlap.
+
 ## v2.1.0
 
 - Add photo-to-sticker-sheet extraction with realistic people and simplified color-block objects.

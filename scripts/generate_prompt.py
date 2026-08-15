@@ -10,7 +10,7 @@ from pathlib import Path
 ASSETS = {
     "wallpaper": {"composition": "portrait editorial composition with clear clock and widget safe zones", "output": "1290x2796 PNG"},
     "sticker": {"composition": "centered die-cut sticker, bold clean outline, transparent background", "output": "3000x3000 transparent PNG when supported"},
-    "sticker-sheet": {"composition": "4:5 collectible sticker sheet with 1-2 realistic people and 4-8 separately cut simplified objects, varied scale, generous spacing, and no overlap", "output": "2400x3000 opaque PNG or JPG"},
+    "sticker-sheet": {"composition": "exact 16:25 portrait collectible sticker sheet with realistic people and 4-8 separately cut simplified objects, varied scale, natural spacing, and a full balanced layout", "output": "1600x2500 opaque PNG or JPG, or another exact 16:25 size"},
     "photocard": {"composition": "premium 2.5:3.5 collectible card layout with print-safe margins", "output": "750x1050 PNG minimum"},
 }
 

@@ -36,6 +36,8 @@ class AgentTests(unittest.TestCase):
         self.assertIn("broad color blocks", prompt)
         self.assertIn("opaque", prompt)
         self.assertIn("Do not use\ntransparency", prompt)
+        self.assertIn("exact 16:25", prompt)
+        self.assertIn("1600x2500", prompt)
 
 
 if __name__ == "__main__":
