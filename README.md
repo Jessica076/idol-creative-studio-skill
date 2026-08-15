@@ -1,3 +1,5 @@
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 # 🎨 Idol Creative Studio Skill
 
 AI-powered creative assistant for transforming idol photos into personalized fan creations.
