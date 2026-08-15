@@ -56,13 +56,15 @@ Recommended elements:
 
 ## Photocard
 
-Standard ratio:
+Finished size and exact ratio:
 
-- 2.5 × 3.5 inch
+- 55 × 89 mm
+- 55:89 portrait
 
 Pixel recommendation:
 
-- 750 × 1050 px minimum
+- 650 × 1051 px minimum at approximately 300 DPI
+- Prefer an exact 55:89 pixel multiple such as 1100 × 1780 or 1650 × 2670 when supported
 
 Resolution:
 

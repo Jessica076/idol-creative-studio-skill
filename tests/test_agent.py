@@ -22,7 +22,8 @@ class AgentTests(unittest.TestCase):
     def test_prompt_contains_identity_output_and_safety_constraints(self):
         prompt = build_prompt("photocard", "black silver luxury", "HAPPY DAY")
         self.assertIn("recognizable identity", prompt)
-        self.assertIn("750x1050", prompt)
+        self.assertIn("55:89", prompt)
+        self.assertIn("650x1051", prompt)
         self.assertIn("HAPPY DAY", prompt)
         self.assertIn("official endorsement", prompt)
         self.assertIn("JESSICA • FAN MADE", prompt)
