@@ -1,10 +1,24 @@
 # Sticker workflow
 
-1. Inspect hair edges, hands, props, and other areas that complicate silhouette extraction.
-2. Choose realistic cutout or stylized/chibi treatment from the request. Preserve recognizable identity in either case.
-3. Create a centered single-subject design with a consistent white or palette-matched cut line.
-4. Request a transparent background. If transparency is unsupported, use a flat chroma-key background and remove it locally when a suitable tool is available.
-5. Keep any text large, short, and inside the cut line.
-6. Check alpha edges, accidental holes, extra limbs, identity, and square crop.
+## Photo-to-sticker sheet
 
-Deliver transparent PNG when supported and distinguish display resolution from print DPI.
+Use this mode when the user asks to extract people and objects from one scene into a coordinated sticker page.
+
+1. Inventory the source before generating: identify every person, then rank distinctive objects, clothing details, food, pets, signs, and environmental motifs. Select 1–2 person poses and 4–8 objects; do not invent unrelated items.
+2. Derive a compact palette from the source: one warm or cool paper-background color, 3–5 object colors, and one outline/accent color.
+3. Keep each person photorealistic and identity-faithful. Preserve face, skin tone, hairstyle, body proportions, clothing, expression, and recognizable pose. Do not turn people into cartoons unless explicitly requested.
+4. Render objects as simplified editorial illustrations with broad color blocks, reduced texture, clean silhouettes, and only enough detail to remain recognizable.
+5. Give every element an independent die-cut shape with a consistent warm-white or palette-matched border and a soft paper shadow.
+6. Arrange the stickers as a collectible sheet on an opaque matte paper background. Use varied scale and rotation, generous spacing, and no overlaps. Do not use transparency, a checkerboard, or a scene-like reconstructed background.
+7. Default to a 4:5 portrait sheet; use square only when requested. Avoid captions unless the user supplies exact text.
+8. Check that all people come from the source, identities remain stable, selected objects are recognizable, cut lines are closed, and the background harmonizes with the source.
+
+## Individual sticker
+
+1. Inspect hair edges, hands, props, and other areas that complicate silhouette extraction.
+2. Preserve a person realistically unless the user explicitly requests a stylized treatment.
+3. Create one centered die-cut design with a consistent border.
+4. Use transparency only when requested; otherwise choose a palette-matched opaque background.
+5. Check edges, accidental holes, anatomy, identity, and crop.
+
+State whether the result is a sticker sheet or an individual sticker and whether its background is opaque or transparent.

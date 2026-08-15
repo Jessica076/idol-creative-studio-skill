@@ -10,6 +10,7 @@ from pathlib import Path
 ASSETS = {
     "wallpaper": {"composition": "portrait editorial composition with clear clock and widget safe zones", "output": "1290x2796 PNG"},
     "sticker": {"composition": "centered die-cut sticker, bold clean outline, transparent background", "output": "3000x3000 transparent PNG when supported"},
+    "sticker-sheet": {"composition": "4:5 collectible sticker sheet with 1-2 realistic people and 4-8 separately cut simplified objects, varied scale, generous spacing, and no overlap", "output": "2400x3000 opaque PNG or JPG"},
     "photocard": {"composition": "premium 2.5:3.5 collectible card layout with print-safe margins", "output": "750x1050 PNG minimum"},
 }
 
@@ -19,11 +20,20 @@ def generate_prompt(output_type: str, style: str, text: str = "", notes: str = "
     asset = ASSETS[output_type]
     copy = text.strip() or "no text"
     extra = notes.strip() or "none"
+    treatment = "" if output_type != "sticker-sheet" else """
+Analyze the source scene first. Use only people and recognizable objects actually present.
+Keep people photorealistic and identity-faithful. Simplify objects into clean editorial
+illustrations with broad color blocks and reduced texture. Give every extracted element
+an independent warm-white die-cut border and soft paper shadow. Arrange them on an opaque
+matte-paper background whose hue and warmth are derived from the source photo. Do not use
+transparency, a checkerboard, or a reconstructed full-scene background.
+"""
     return f"""Edit the supplied reference image into an unofficial fan-made {output_type}.
 
 Preserve the subject's recognizable identity: facial geometry, skin tone, hairstyle,
 expression, pose cues, and distinctive accessories. Use the reference image as the
 identity source; do not replace the person.
+{treatment}
 
 Art direction: {style.strip()}
 Composition: {asset['composition']}

@@ -15,11 +15,11 @@
 
 ## What it creates
 
-| Wallpaper | Sticker | Photocard |
+| Wallpaper | Sticker sheet | Photocard |
 |---|---|---|
-| Lock-screen-safe composition | Transparent die-cut layout | Front/back collectible design |
-| Phone and desktop sizes | Print-friendly outline | Album, birthday, luxury concepts |
-| Luxury, dreamy, dark, retro | Cute, realistic, holographic | Safe margins and exact ratio |
+| Lock-screen-safe composition | People stay realistic | Front/back collectible design |
+| Phone and desktop sizes | Objects become bold color blocks | Album, birthday, luxury concepts |
+| Luxury, dreamy, dark, retro | Opaque palette-matched paper | Safe margins and exact ratio |
 
 The skill asks the host's available image editor to preserve the reference person's identity, checks common generation defects, and labels potentially confusing designs as unofficial fan-made work.
 
@@ -41,6 +41,10 @@ Or use a natural request after installation:
 
 ```text
 Turn my attached concert photo into a cinematic iPhone lock-screen wallpaper.
+```
+
+```text
+把照片里的人物和代表性物品拆成一整页贴纸：人物保持真实，物品用大色块画风，背景用与原图匹配的奶油纸张色，不要透明底。
 ```
 
 If the skill does not appear immediately, restart Codex. Availability of image generation/editing depends on the user's product, plan, workspace policy, region, and current usage limits.

@@ -5,6 +5,7 @@ from scripts.generate_prompt import generate_prompt
 
 WORKFLOW_TERMS = {
     "wallpaper": ("wallpaper", "壁纸", "锁屏", "lock screen", "desktop background"),
+    "sticker-sheet": ("sticker sheet", "photo-to-sticker", "贴纸页", "贴纸组", "照片拆解贴纸", "整版贴纸"),
     "sticker": ("sticker", "贴纸", "emoji", "表情包", "die-cut"),
     "photocard": ("photocard", "photo card", "小卡", "收藏卡", "collectible card"),
 }
@@ -28,5 +29,5 @@ def run_agent(request: str, style: str, text: str = "", notes: str = "") -> str:
     """Return a prompt for the user's host image tool; perform no network request."""
     workflow = select_workflow(request)
     if workflow == "unknown":
-        raise ValueError("Request must specify wallpaper, sticker, or photocard")
+        raise ValueError("Request must specify wallpaper, sticker, sticker sheet, or photocard")
     return build_prompt(workflow, style, text, notes)

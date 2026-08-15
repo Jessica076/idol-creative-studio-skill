@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.1.0
+
+- Add photo-to-sticker-sheet extraction with realistic people and simplified color-block objects.
+- Add opaque source-matched paper backgrounds and bilingual sticker-sheet triggers.
+- Add deterministic prompt and routing tests for the hybrid visual treatment.
+
 ## v2.0.0
 
 - Route image work through the installing user's host-provided tools instead of a maintainer API key.

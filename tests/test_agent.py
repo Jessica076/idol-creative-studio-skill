@@ -10,6 +10,8 @@ class AgentTests(unittest.TestCase):
             "做一张手机壁纸": "wallpaper",
             "Create a sticker": "sticker",
             "帮我做透明贴纸": "sticker",
+            "把这张照片拆解成贴纸页": "sticker-sheet",
+            "Create a photo-to-sticker sheet": "sticker-sheet",
             "Create a photocard": "photocard",
             "做一张生日小卡": "photocard",
         }
@@ -25,8 +27,15 @@ class AgentTests(unittest.TestCase):
         self.assertIn("official endorsement", prompt)
 
     def test_unknown_request_is_rejected(self):
-        with self.assertRaisesRegex(ValueError, "wallpaper, sticker, or photocard"):
+        with self.assertRaisesRegex(ValueError, "sticker sheet"):
             run_agent("make something", "cute")
+
+    def test_sticker_sheet_prompt_has_hybrid_treatment_and_opaque_background(self):
+        prompt = build_prompt("sticker-sheet", "warm cream paper with colors sampled from the photo")
+        self.assertIn("Keep people photorealistic", prompt)
+        self.assertIn("broad color blocks", prompt)
+        self.assertIn("opaque", prompt)
+        self.assertIn("Do not use\ntransparency", prompt)
 
 
 if __name__ == "__main__":

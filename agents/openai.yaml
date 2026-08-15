@@ -1,4 +1,4 @@
 interface:
   display_name: "Idol Creative Studio"
-  short_description: "Turn idol photos into fan-made wallpapers, stickers, and photocards"
-  default_prompt: "Use $idol-creative-studio to turn my attached photo into a polished fan-made photocard."
+  short_description: "Turn photos into sticker sheets, wallpapers, and photocards"
+  default_prompt: "Use $idol-creative-studio to extract the people and signature objects from my attached photo into a coordinated sticker sheet."
