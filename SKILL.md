@@ -1,5 +1,6 @@
 ---
 name: idol-creative-studio
+version: 1.0.0
 description: Create personalized idol wallpapers, stickers and photocard designs from user uploaded images using specialized design workflows and style libraries.
 ---
 
