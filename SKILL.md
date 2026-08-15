@@ -48,6 +48,6 @@ Keep typography short. Treat `JESSICA • FAN MADE` as a fixed attribution, not 
 - Desktop wallpaper: 3840×2160 landscape PNG.
 - Sticker: square transparent PNG, 3000×3000 when supported, bold cut line.
 - Sticker sheet: 16:25 portrait PNG/JPG (use 1600×2500 or a proportional size) with an opaque palette-matched paper background, realistic person stickers, and simplified object stickers.
-- Photocard: 2.5×3.5 inch ratio, 750×1050 minimum; create front and back as separate files when both are requested.
+- Photocard: exact 55:89 ratio for a 55×89 mm finished card, 650×1051 minimum at approximately 300 DPI; create front and back as separate files when both are requested.
 
 Read `config/size-guide.md` for device-specific sizing and print bleed. Read `config/design-rules.md` for identity, text, and quality checks.
