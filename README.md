@@ -151,3 +151,26 @@ Advanced features:
 # ❤️ Purpose
 
 Built for idol fans who want to create personalized digital memories and fan-made designs with AI.
+
+# 🧠 Agent Architecture
+User Request
+
+↓
+
+Agent Router
+
+↓
+
+Workflow Selection
+
+↓
+
+Prompt Builder
+
+↓
+
+Image Generation API
+
+↓
+
+Creative Output
