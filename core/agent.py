@@ -1,83 +1,32 @@
-from api.image_generator import generate_image
+"""Local routing helpers. This module never calls an image API."""
+
+from scripts.generate_prompt import generate_prompt
 
 
-def select_workflow(request):
+WORKFLOW_TERMS = {
+    "wallpaper": ("wallpaper", "壁纸", "锁屏", "lock screen", "desktop background"),
+    "sticker": ("sticker", "贴纸", "emoji", "表情包", "die-cut"),
+    "photocard": ("photocard", "photo card", "小卡", "收藏卡", "collectible card"),
+}
 
-    request = request.lower()
 
-    if "wallpaper" in request or "壁纸" in request:
-        return "wallpaper"
-
-    if "sticker" in request or "贴纸" in request:
-        return "sticker"
-
-    if "photocard" in request or "小卡" in request:
-        return "photocard"
-
+def select_workflow(request: str) -> str:
+    normalized = request.casefold()
+    for workflow, terms in WORKFLOW_TERMS.items():
+        if any(term in normalized for term in terms):
+            return workflow
     return "unknown"
 
 
-
-def build_prompt(workflow, style):
-
-    prompts = {
-
-        "wallpaper":
-        """
-        Create a premium idol wallpaper.
-        High resolution.
-        Professional composition.
-        """,
-
-        "sticker":
-        """
-        Create a collectible idol sticker.
-        Transparent background.
-        Clean outline.
-        """,
-
-        "photocard":
-        """
-        Create a luxury idol photocard.
-        Album style design.
-        """
-    }
+def build_prompt(workflow: str, style: str, text: str = "", notes: str = "") -> str:
+    if workflow not in WORKFLOW_TERMS:
+        raise ValueError(f"Unsupported workflow: {workflow}")
+    return generate_prompt(workflow, style, text, notes)
 
 
-    return prompts.get(workflow, "") + f"""
-    
-Style:
-{style}
-
-Requirements:
-- Preserve idol identity
-- High quality
-- Professional fan merchandise design
-
-"""
-
-
-
-def run_agent(request, style):
-
+def run_agent(request: str, style: str, text: str = "", notes: str = "") -> str:
+    """Return a prompt for the user's host image tool; perform no network request."""
     workflow = select_workflow(request)
-
-    prompt = build_prompt(
-        workflow,
-        style
-    )
-
-    result = generate_image(prompt)
-
-    return result
-
-
-
-if __name__ == "__main__":
-
-    output = run_agent(
-        "Create a photocard",
-        "K-pop luxury black silver style"
-    )
-
-    print(output)
+    if workflow == "unknown":
+        raise ValueError("Request must specify wallpaper, sticker, or photocard")
+    return build_prompt(workflow, style, text, notes)

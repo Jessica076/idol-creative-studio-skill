@@ -1,64 +1,10 @@
-# Wallpaper Workflow
+# Wallpaper workflow
 
+1. Determine phone or desktop target. Use `config/size-guide.md` when the device is named.
+2. Inspect subject position, background extension opportunities, lighting, and likely crop risks.
+3. Reserve the upper 20–25% for clock/status UI and keep faces away from screen edges.
+4. Match palette to clothing and source lighting. Extend the environment instead of stretching the person.
+5. Generate one polished composition with no logos or watermark.
+6. Check identity, hands, edge crops, UI safe zone, and target aspect ratio; retry once if needed.
 
-## Goal
-
-Transform idol images into professional wallpapers.
-
-
-## Input
-
-Required:
-
-- Idol image
-- Preferred style
-- Device type
-
-
-## Process
-
-
-### Step 1
-
-Analyze image:
-
-- Subject position
-- Lighting
-- Background
-
-
-### Step 2
-
-Select style:
-
-Available:
-
-- K-pop Luxury
-- Cute Fan
-- Retro Film
-- Anime Style
-
-
-### Step 3
-
-Create wallpaper concept:
-
-Consider:
-
-- Screen composition
-- Negative space
-- Visual balance
-
-
-### Step 4
-
-Generate output
-
-
-## Output
-
-Provide:
-
-- Design concept
-- Recommended resolution
-- Final wallpaper
+Deliver the image as PNG by default and state the dimensions.

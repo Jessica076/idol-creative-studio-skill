@@ -1,176 +1,107 @@
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+<div align="center">
 
-# 🎨 Idol Creative Studio Skill
+# Idol Creative Studio ✦ 偶像创意工坊
 
-AI-powered creative assistant for transforming idol photos into personalized fan creations.
+**Upload one photo. Get a wallpaper, sticker, or photocard — inside your own AI workspace.**
 
-Create:
+上传一张照片，在你自己的 Codex / ChatGPT 环境中制作饭制壁纸、透明贴纸和收藏小卡。
 
-- 📱 Idol Wallpapers
-- ✨ Custom Stickers
-- 💎 Collectible Photocards
+[![Skill](https://img.shields.io/badge/Codex-Skill-111827)](https://developers.openai.com/codex/skills)
+[![No owner API key](https://img.shields.io/badge/owner_API_key-not_required-16a34a)](#how-usage-works)
+[![Tests](https://img.shields.io/badge/tests-unittest-2563eb)](#development)
+[![License: MIT](https://img.shields.io/badge/license-MIT-f59e0b)](LICENSE)
 
+</div>
 
-## 🌟 Overview
+## What it creates
 
-Idol Creative Studio helps fans transform their favorite idol images into professional-quality digital creations.
+| Wallpaper | Sticker | Photocard |
+|---|---|---|
+| Lock-screen-safe composition | Transparent die-cut layout | Front/back collectible design |
+| Phone and desktop sizes | Print-friendly outline | Album, birthday, luxury concepts |
+| Luxury, dreamy, dark, retro | Cute, realistic, holographic | Safe margins and exact ratio |
 
-The skill combines AI image editing workflows with specialized design prompts inspired by:
+The skill asks the host's available image editor to preserve the reference person's identity, checks common generation defects, and labels potentially confusing designs as unofficial fan-made work.
 
-- K-pop album concepts
-- Fan event designs
-- Collectible merchandise aesthetics
+## Install from GitHub
 
+Ask Codex:
 
-## ✨ Features
+```text
+$skill-installer install https://github.com/Jessica076/idol-creative-studio-skill
+```
 
+Then invoke it explicitly:
 
-## 📱 Wallpaper Generator
+```text
+$idol-creative-studio 把我上传的照片做成黑银奢华风生日小卡，文字写 “HAPPY J DAY”
+```
 
-Transform idol photos into:
+Or use a natural request after installation:
 
-- Smartphone wallpapers
-- Desktop backgrounds
-- Premium album-style visuals
+```text
+Turn my attached concert photo into a cinematic iPhone lock-screen wallpaper.
+```
 
-Supported styles:
+If the skill does not appear immediately, restart Codex. Availability of image generation/editing depends on the user's product, plan, workspace policy, region, and current usage limits.
 
-- Luxury
-- Dreamy
-- Dark concept
-- Vintage film
+## How usage works
 
+- This repository contains instructions and local utilities; it does not ship a hosted image API.
+- It does not contain, collect, proxy, or require the repository owner's OpenAI API key.
+- Image work runs through tools available to the installing user's Codex/ChatGPT environment and is subject to that user's account access and limits.
+- The optional prompt builder runs locally and makes no network requests.
 
----
+This means the maintainer does not pay per-user API charges. It does **not** mean image generation is universally free or unlimited.
 
-## ✨ Sticker Generator
+## Try it
 
-Create collectible stickers from idol images.
+```bash
+python scripts/generate_prompt.py \
+  --type photocard \
+  --style "black and silver luxury editorial" \
+  --text "HAPPY J DAY"
+```
 
-Features:
+The command only creates a portable editing prompt. It never reads an API key or sends data over the network.
 
-- Background removal
-- Clean sticker outline
-- Transparent PNG style
-- Merchandise-ready design
+## Designed for sharing
 
-Styles:
+- Chinese and English trigger phrases
+- Three focused, repeatable workflows
+- Built-in identity and output QA checklist
+- Clear fan-made and rights guardrails
+- No backend, database, signup, telemetry, or maintainer credentials
+- Portable `SKILL.md` plus `agents/openai.yaml` metadata
 
-- Cute chibi
-- Cartoon
-- Holographic
-- Realistic sticker
+## Project map
 
+```text
+.
+├── SKILL.md                 # Trigger metadata and core workflow
+├── agents/openai.yaml       # Skill picker metadata
+├── workflows/               # Wallpaper, sticker, photocard playbooks
+├── styles/                  # Reusable art-direction guides
+├── config/                  # Size and quality rules
+├── scripts/                 # Local prompt and image utilities
+└── tests/                   # Offline unit tests
+```
 
----
+## Responsible fan creation
 
-## 💎 Photocard Generator
+Do not use this project for sexualized minors, harassment, impersonation, fabricated endorsements, or counterfeit “official” merchandise. Commercial users are responsible for image, publicity, trademark, and font rights.
 
-Generate collectible idol photocards.
+## Development
 
-Includes:
+```bash
+python -m unittest discover -s tests -v
+python scripts/generate_prompt.py --type sticker --style "pastel cute fan style"
+```
 
-Front:
+Pillow is optional and only required by the local resize helper.
 
-- Idol portrait design
-- Album-inspired layout
-- Concept styling
+Contributions that add a reusable workflow, improve identity preservation, or add real before/after examples with proper rights are welcome.
 
+## License
 
-Back:
-
-- Signature area
-- Fan message section
-- Event information
-
-
-Supported concepts:
-
-- Album edition
-- Birthday event
-- Luxury limited edition
-
-
-# 📂 Project Structure
-idol-creative-studio-skill/
-├── SKILL.md
-├── prompts/
-│   ├── wallpaper.md
-│   ├── sticker.md
-│   └── photocard.md
-└── README.md
-
-
-# 🚀 How To Use
-
-1. Upload an idol image.
-
-2. Choose creation type:
-
-- Wallpaper
-- Sticker
-- Photocard
-
-3. Select style preference.
-
-4. Generate your personalized design.
-
-
-# 🎯 Future Roadmap
-
-# 🎬 Demo Preview
-
-Coming soon:
-
-| Feature | Example |
-|---|---|
-| Wallpaper | Idol cinematic phone wallpaper |
-| Sticker | Cute collectible sticker |
-| Photocard | Luxury album-style card |
-
-
-## V2
-
-Coming soon:
-
-- More K-pop concept templates
-- Anime-inspired designs
-- Album cover generator
-- Phone case mockups
-
-
-## V3
-
-Advanced features:
-
-- Merchandise mockups
-- Acrylic stand designs
-- Fan event packages
-
-
-# ❤️ Purpose
-
-Built for idol fans who want to create personalized digital memories and fan-made designs with AI.
-
-# 🧠 Agent Architecture
-User Request
-
-↓
-
-Agent Router
-
-↓
-
-Workflow Selection
-
-↓
-
-Prompt Builder
-
-↓
-
-Image Generation API
-
-↓
-
-Creative Output
+[MIT](LICENSE) · Fan-made project; not affiliated with or endorsed by any artist, agency, or platform.

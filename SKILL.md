@@ -1,165 +1,51 @@
 ---
 name: idol-creative-studio
-version: 1.0.0
-description: Create personalized idol wallpapers, stickers and photocard designs from user uploaded images using specialized design workflows and style libraries.
+description: Turn one or more user-supplied idol, celebrity, performer, cosplay, or portrait photos into polished fan-made wallpapers, transparent stickers, and collectible photocards. Use for requests mentioning idol wallpaper, lock screen, fan edit, K-pop photocard, 小卡, 饭制, 应援, sticker, 贴纸, or social-ready fan art. Preserve identity and use the host's available image-generation/editing tool; do not request or embed a developer API key. Do not use for deceptive, sexualized, or commercial-official-looking content.
 ---
 
 # Idol Creative Studio
 
-## Role
+Create a finished fan-made visual from the user's reference image. Prefer the host's built-in image generation/editing capability. Never ask the user to paste an API key into chat and never route work through a repository-owner account.
 
-You are an AI creative designer specialized in idol fan content creation.
+## Workflow
 
-Your goal is to transform user-provided idol images into professional-quality digital merchandise designs.
+1. Inspect every supplied image before editing. If the target image is unavailable, ask the user to attach it; do not invent the person's identity.
+2. Infer the output type, style, device/size, text, and color palette from the request. Ask only when a missing choice would materially change the result.
+3. Read the matching guide:
+   - Wallpaper: `workflows/wallpaper-workflow.md`
+   - Sticker: `workflows/sticker-workflow.md`
+   - Photocard: `workflows/photocard-workflow.md`
+4. Read only the requested style file under `styles/`. If no style is specified, choose the best fit from the source image and say what you chose.
+5. Compose an image-edit prompt with `python scripts/generate_prompt.py` when a deterministic prompt artifact is useful. Otherwise apply the same prompt contract directly.
+6. Generate or edit the image with the host-provided image tool. Include all target reference images and preserve recognizable facial geometry, hairstyle, skin tone, pose cues, and distinctive accessories.
+7. Inspect the result. Retry once for obvious identity drift, malformed hands, illegible text, accidental extra people, broken transparency, or unsafe crop zones.
+8. Deliver the rendered image, its dimensions/format, and one short creative note. Do not stop at a prompt or concept unless the user explicitly requests prompt-only output.
 
----
-
-# Available Workflows
-
-When the user uploads an idol image, identify the requested output type.
-
-## Workflow Selection
-
-Choose the appropriate workflow:
-
-### Wallpaper
-
-Use when users request:
-
-- phone wallpaper
-- desktop background
-- lock screen image
-
-Reference:
-
-- prompts/wallpaper.md
-- styles/
-
-
----
-
-### Sticker
-
-Use when users request:
-
-- sticker
-- emoji
-- collectible sticker
-- transparent PNG design
-
-Reference:
-
-- prompts/sticker.md
-- styles/
-
-
----
-
-### Photocard
-
-Use when users request:
-
-- idol card
-- album card
-- collectible photocard
-- fan event card
-
-Reference:
-
-- prompts/photocard.md
-- styles/
-
-
----
-
-# Design Process
-
-For every task:
-
-## Step 1: Understand Input
-
-Collect:
-
-- Image
-- Desired output
-- Style preference
-- Text information
-- Size requirement
-
-
-## Step 2: Analyze Image
-
-Evaluate:
-
-- Main subject position
-- Lighting
-- Background
-- Composition
-- Visual theme
-
-
-## Step 3: Select Style
-
-Match user preference with:
-
-styles/
-
-Available styles:
-
-- K-pop Luxury
-- Cute Fan
-- Retro Film
-- Anime Style
-
-
-## Step 4: Generate Design
-
-Follow the selected prompt workflow.
-
-Maintain:
-
-- Idol identity
-- Natural appearance
-- High quality
-- Professional composition
-
-
----
-
-# Quality Standards
-
-Always:
-
-- Preserve facial features
-- Avoid distortion
-- Create balanced layouts
-- Optimize for final usage
-
-
----
-
-# Output Format
-
-Provide:
-
-## Design Concept
-
-Explain:
-
-- Style choice
-- Visual direction
-- Creative idea
-
-
-## Production Settings
+## Prompt contract
 
 Include:
 
-- Recommended size
-- Format
-- Usage scenario
+- asset type and exact aspect ratio;
+- source-image identity and elements that must remain unchanged;
+- composition, palette, lighting, texture, typography, and safe zones;
+- explicit negative constraints: no face reshaping, no extra people or limbs, no brand logos, no watermark, no fake signature;
+- `fan-made / unofficial` labeling when a design could be confused with official merchandise.
 
+Keep typography short. For exact names, dates, or long copy, prefer generating a clean layout and adding text with a local graphics tool when available.
 
-## Final Result
+## Safety and rights
 
-Generate the requested creative output.
+- Treat uploaded photos as references only for the user's requested creative edit.
+- Refuse sexualized depictions of minors or age-ambiguous people.
+- Do not create harassment, humiliating edits, impersonation, fabricated endorsements, or misleading “official” merchandise.
+- Do not reproduce a living artist's exact style. Translate requests into high-level visual traits.
+- For commercial printing or sales, remind the user to verify image, publicity, trademark, and font rights.
+
+## Output defaults
+
+- Phone wallpaper: 1290×2796 portrait PNG, with clock/widget safe space.
+- Desktop wallpaper: 3840×2160 landscape PNG.
+- Sticker: square transparent PNG, 3000×3000 when supported, bold cut line.
+- Photocard: 2.5×3.5 inch ratio, 750×1050 minimum; create front and back as separate files when both are requested.
+
+Read `config/size-guide.md` for device-specific sizing and print bleed. Read `config/design-rules.md` for identity, text, and quality checks.

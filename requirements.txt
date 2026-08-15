@@ -1,3 +1,3 @@
-openai
-pillow
-python-dotenv
+# Prompt generation and tests use only the Python standard library.
+# Pillow is optional and only needed for scripts/image_resize.py.
+Pillow>=10.0

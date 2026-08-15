@@ -1,39 +1,23 @@
-# Design Rules
+# Design and QA rules
 
-## Identity Preservation
+## Identity
 
-When editing idol images:
-
-Always maintain:
-
-- Facial features
-- Hairstyle
-- Natural appearance
-- Recognizable identity
-
+- Preserve facial geometry, skin tone, hairstyle, expression, pose cues, and distinctive accessories.
+- Do not beautify by changing ethnicity, face shape, age, or body proportions.
+- Prefer one strong edit over a collage when only one reference image is supplied.
 
 ## Composition
 
-Follow:
+- Maintain one clear focal point and balanced negative space.
+- Protect crop, clock, widget, trim, and cut-line safe zones for the chosen asset.
+- Match the palette to the source outfit and lighting unless the user explicitly requests a contrast.
 
-- Clear subject focus
-- Balanced spacing
-- Professional layout
+## Text
 
+- Use exact user-provided spelling. Keep generated text short.
+- Never invent signatures, endorsements, agency logos, or official marks.
+- Add `FAN MADE` or `UNOFFICIAL` when confusion with official merchandise is plausible.
 
-## Color Matching
+## Final inspection
 
-Match:
-
-- Idol outfit
-- Original photo mood
-- Requested concept
-
-
-## Merchandise Quality
-
-Designs should feel suitable for:
-
-- Official album concepts
-- Fan projects
-- Collectible products
+Reject or retry outputs with identity drift, extra people, malformed anatomy, unreadable text, unintended watermark, broken transparency, or incorrect aspect ratio.

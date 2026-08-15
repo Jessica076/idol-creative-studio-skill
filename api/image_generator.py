@@ -1,30 +1,16 @@
-from openai import OpenAI
+"""Compatibility helpers for v1 users.
+
+The project no longer calls a developer-owned image API. Use the prompt returned here
+with the image-generation/editing tool available in the user's Codex or ChatGPT host.
+"""
+
+from scripts.generate_prompt import generate_prompt
 
 
-client = OpenAI()
+def generate_image_prompt(prompt: str) -> str:
+    """Return the prompt unchanged; no network or credential access occurs."""
+    return prompt.strip()
 
 
-def generate_image(prompt):
-
-    response = client.images.generate(
-        model="gpt-image-1",
-        prompt=prompt,
-        size="1024x1024"
-    )
-
-    image_url = response.data[0].url
-
-    return image_url
-
-
-if __name__ == "__main__":
-
-    prompt = """
-    Create a luxury K-pop idol photocard design.
-    Black and silver theme.
-    Premium album style.
-    """
-
-    result = generate_image(prompt)
-
-    print(result)
+def example_prompt() -> str:
+    return generate_prompt("photocard", "luxury black and silver album editorial")
