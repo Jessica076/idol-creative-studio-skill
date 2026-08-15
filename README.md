@@ -118,6 +118,17 @@ idol-creative-studio-skill/
 
 # 🎯 Future Roadmap
 
+# 🎬 Demo Preview
+
+Coming soon:
+
+| Feature | Example |
+|---|---|
+| Wallpaper | Idol cinematic phone wallpaper |
+| Sticker | Cute collectible sticker |
+| Photocard | Luxury album-style card |
+
+
 ## V2
 
 Coming soon:
