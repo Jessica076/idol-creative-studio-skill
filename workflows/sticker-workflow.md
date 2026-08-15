@@ -11,7 +11,8 @@ Use this mode when the user asks to extract people and objects from one scene in
 5. Give every element an independent die-cut shape with a consistent warm-white or palette-matched border and a soft paper shadow.
 6. Arrange the stickers as a collectible sheet on an opaque matte paper background. Use varied scale and slight rotation, natural breathing room, and a full but balanced composition. Allow only minimal border-level overlap when useful; never obscure a face or the recognizable core of an object. Do not use transparency, a checkerboard, or a scene-like reconstructed background.
 7. Default to a 16:25 portrait sheet, using 1600×2500 or another exactly proportional size. Use another ratio only when the user explicitly requests it. Avoid captions unless the user supplies exact text.
-8. Check that all people come from the source, identities remain stable, selected objects are recognizable, cut lines are closed, and the background harmonizes with the source.
+8. Place the `JESSICA • FAN MADE` creator mark along the bottom safe zone, separate from all die-cut elements. Prefer `assets/jessica-fan-made-mark.svg` so the lettering remains exact.
+9. Check that all people come from the source, identities remain stable, selected objects are recognizable, cut lines are closed, the creator mark is legible, and the background harmonizes with the source.
 
 ## Individual sticker
 
@@ -19,6 +20,7 @@ Use this mode when the user asks to extract people and objects from one scene in
 2. Preserve a person realistically unless the user explicitly requests a stylized treatment.
 3. Create one centered die-cut design with a consistent border.
 4. Use transparency only when requested; otherwise choose a palette-matched opaque background.
-5. Check edges, accidental holes, anatomy, identity, and crop.
+5. Add the creator mark outside the cut silhouette when an opaque presentation background is used. For transparent deliverables, provide the attribution on a separate preview sheet rather than embedding it into the cut sticker.
+6. Check edges, accidental holes, anatomy, identity, and crop.
 
 State whether the result is a sticker sheet or an individual sticker and whether its background is opaque or transparent.

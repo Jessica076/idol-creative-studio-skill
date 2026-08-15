@@ -25,6 +25,7 @@ class AgentTests(unittest.TestCase):
         self.assertIn("750x1050", prompt)
         self.assertIn("HAPPY DAY", prompt)
         self.assertIn("official endorsement", prompt)
+        self.assertIn("JESSICA • FAN MADE", prompt)
 
     def test_unknown_request_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "sticker sheet"):

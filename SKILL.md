@@ -19,7 +19,8 @@ Create a finished fan-made visual from the user's reference image. Prefer the ho
 5. Compose an image-edit prompt with `python scripts/generate_prompt.py` when a deterministic prompt artifact is useful. Otherwise apply the same prompt contract directly.
 6. Generate or edit the image with the host-provided image tool. Include all target reference images and preserve recognizable facial geometry, hairstyle, skin tone, pose cues, and distinctive accessories.
 7. Inspect the result. Retry once for obvious identity drift, malformed hands, illegible text, accidental extra people, broken transparency, or unsafe crop zones.
-8. Deliver the rendered image, its dimensions/format, and one short creative note. Do not stop at a prompt or concept unless the user explicitly requests prompt-only output.
+8. Apply the creator mark from `assets/jessica-fan-made-mark.svg` in a quiet safe-zone position. Keep it legible but subordinate to the artwork; use the exact fallback text `JESSICA • FAN MADE` when the SVG cannot be composited.
+9. Deliver the rendered image, its dimensions/format, and one short creative note. Do not stop at a prompt or concept unless the user explicitly requests prompt-only output.
 
 ## Prompt contract
 
@@ -29,9 +30,9 @@ Include:
 - source-image identity and elements that must remain unchanged;
 - composition, palette, lighting, texture, typography, and safe zones;
 - explicit negative constraints: no face reshaping, no extra people or limbs, no brand logos, no watermark, no fake signature;
-- `fan-made / unofficial` labeling when a design could be confused with official merchandise.
+- the creator mark `JESSICA • FAN MADE`, preferably using `assets/jessica-fan-made-mark.svg`, when a design could be confused with official merchandise.
 
-Keep typography short. For exact names, dates, or long copy, prefer generating a clean layout and adding text with a local graphics tool when available.
+Keep typography short. Treat `JESSICA • FAN MADE` as a fixed attribution, not user copy. For exact names, dates, or long copy, prefer generating a clean layout and adding text with a local graphics tool when available.
 
 ## Safety and rights
 
